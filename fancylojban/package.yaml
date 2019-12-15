@@ -1,0 +1,37 @@
+name:                fancylojban
+version:             0.1.0.0
+github:              "tsani/fancylojban"
+license:             BSD3
+author:              "Jacob Thomas Errington"
+maintainer:          "fancylojban@mail.jerrington.me"
+copyright:           "2019 Jacob Thomas Errington"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/tsani/fancylojban#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  fancylojban-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - fancylojban
